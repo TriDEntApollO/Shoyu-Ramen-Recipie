@@ -400,6 +400,70 @@ img {
   color: var(--text);
 }
 
+.markdown {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  line-height: 1.75;
+}
+
+.markdown h1,
+.markdown h2,
+.markdown h3,
+.markdown h4 {
+  margin-top: 32px;
+}
+
+.markdown h1 {
+  font-size: clamp(2.6rem, 3.6vw, 3.6rem);
+}
+
+.markdown h2 {
+  font-size: clamp(2rem, 3vw, 2.6rem);
+}
+
+.markdown h3 {
+  font-size: 1.6rem;
+}
+
+.markdown p {
+  color: var(--text-muted);
+}
+
+.markdown ul,
+.markdown ol {
+  padding-left: 1.4rem;
+  margin: 0;
+  display: grid;
+  gap: 10px;
+  color: var(--text-muted);
+}
+
+.markdown hr {
+  border: none;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--border), transparent);
+  margin: 28px 0;
+}
+
+.markdown blockquote {
+  margin: 0;
+  padding: 16px 18px;
+  border-left: 2px solid var(--accent);
+  background: rgba(196, 122, 44, 0.08);
+  border-radius: 16px;
+  color: var(--text);
+}
+
+.markdown a {
+  color: var(--accent);
+  text-decoration: none;
+}
+
+.markdown a:hover {
+  color: var(--text);
+}
+
 @keyframes steam {
   0% {
     transform: translateY(0) scale(1);
