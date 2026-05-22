@@ -1,4 +1,4 @@
-import './App.css'
+
 
 function App() {
   const ramenHero = new URL('../Images/Ramen.png', import.meta.url).href
