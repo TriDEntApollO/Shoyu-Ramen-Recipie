@@ -287,6 +287,15 @@ img {
   gap: 16px;
 }
 
+.section-header .eyebrow {
+  font-size: clamp(1.05rem, 1.6vw, 1.35rem);
+  letter-spacing: 0.16em;
+}
+
+.section-header h2 {
+  font-size: clamp(1.25rem, 2.2vw, 1.95rem);
+}
+
 .section-note {
   max-width: 520px;
 }
@@ -332,14 +341,32 @@ img {
 .steps {
   margin: 0;
   padding-left: 20px;
+  list-style: decimal;
+  list-style-position: outside;
   display: grid;
   gap: 10px;
   color: var(--text-muted);
 }
 
+.steps ::marker {
+  color: #d9924a;
+}
+
 .list {
   margin: 0;
   padding-left: 20px;
+  list-style: disc;
+  list-style-position: outside;
+  display: grid;
+  gap: 8px;
+  color: var(--text-muted);
+}
+
+.prep-list {
+  margin: 0;
+  padding-left: 20px;
+  list-style: disc;
+  list-style-position: outside;
   display: grid;
   gap: 8px;
   color: var(--text-muted);
