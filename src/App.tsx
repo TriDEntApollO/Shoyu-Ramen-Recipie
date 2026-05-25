@@ -236,7 +236,7 @@
           <div className="card">
             <h3>Final Garnishes</h3>
             <pre className="code-block">
-                Thinly sliced green onions
+               Thinly sliced green onions
               - Sesame seeds
             </pre>
           </div>
