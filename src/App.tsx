@@ -1096,7 +1096,7 @@
           <div className="section-header">
             <div>
               <p className="eyebrow">Chicken Katsu</p>
-              <h2>Chicken Katsu</h2>
+              <h2>Crispy, Juicy Chicken Cutlet</h2>
             </div>
             <div className="image-panel">
               <img src={katsuImg} alt="Chicken katsu" />
