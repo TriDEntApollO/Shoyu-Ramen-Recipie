@@ -1,13 +1,15 @@
 ﻿function App() {
   const ramenHero = new URL('../Images/Ramen.png', import.meta.url).href
-  const brothImg = new URL('../Images/Mirepoix.png', import.meta.url).href
+  const mirepoixImg = new URL('../Images/Mirepoix.png', import.meta.url).href
+  const charredVeggieImg = new URL('../Images/Charred Veggies.png', import.meta.url).href
   const chiliImg = new URL('../Images/Chili oil.png', import.meta.url).href
   const paneerImg = new URL('../Images/Soy Cured Paneer-Tofu.jpg', import.meta.url).href
-  const eggImg = new URL('../Images/Soy Cured Egg.jpeg', import.meta.url).href
+  const eggImg = new URL('../Images/Soy Cured Eggs.png', import.meta.url).href
   const cornImg = new URL('../Images/Brown Butter Sweet Corn.png', import.meta.url).href
   const mushroomImg = new URL('../Images/Sauteed Mushrooms.png',import.meta.url).href
   const chickenImg = new URL('../Images/Soy Glazed Chicken.png', import.meta.url).href
   const katsuImg = new URL('../Images/Chicken-Katsu.jpg', import.meta.url).href
+  const noodlesImg = new URL('../Images/Noodles.png', import.meta.url).href
 
   const navItems = [
     { id: 'intro', label: 'Introduction' },
@@ -32,6 +34,7 @@
       <header className="site-header">
         <nav className="nav-wrap">
           <div className="brand">
+            <img className="brand-logo" src="/favicon.png" alt="Ramen logo" />
             <span className="brand-dot"></span>
             <div>
               <p className="brand-title">Shoyu Ramen</p>
@@ -76,7 +79,8 @@
               <span className="pill">Broth-forward</span>
               <span className="pill">Soy + sesame warmth</span>
               <span className="pill">Spice-adjustable</span>
-              <span className="pill">Vegetarian-ready</span>
+              <span className="pill">Non-vegetarian-options</span>
+              <span className="pill">Vegetarian-options</span>
             </div>
           </div>
           <div className="hero-media">
@@ -96,155 +100,202 @@
               <h2>Full Ingredient List</h2>
             </div>
             <p className="section-note">
-              Use these blocks as a complete checklist. The recipe cards below
-              walk through each component with step-by-step timing and notes.
+              Use these grouped ingredient cards to scan faster and prep with
+              confidence before you start cooking.
             </p>
           </div>
-          <div className="grid-3">
-            <div className="card">
+          <div className="ingredients-grid">
+            <div className="card ingredient-card">
               <h3>Non-Vegetarian Broth</h3>
-              <pre className="code-block">
-                  Chicken bones
-                - Chicken meat and fat (optional)
-                - Onion
-                - Carrot
-                - Apple
-                - Garlic
-                - Ginger
-                - Green onion whites and greens separated
-                - Whole or coarsely cracked black pepper
-                - Neutral oil
-                - Salt
-                - Water
-              </pre>
+              <div className="ingredient-chips">
+                <span className="ingredient-chip">Chicken bones</span>
+                <span className="ingredient-chip optional">
+                  Chicken meat
+                  <span className="chip-badge">Optional</span>
+                </span>
+                <span className="ingredient-chip optional">
+                  Chicken fat
+                  <span className="chip-badge">Optional</span>
+                </span>
+                <span className="ingredient-chip">Onion</span>
+                <span className="ingredient-chip">Carrot</span>
+                <span className="ingredient-chip">Apple</span>
+                <span className="ingredient-chip">Garlic</span>
+                <span className="ingredient-chip">Ginger</span>
+                <span className="ingredient-chip">Green onion whites</span>
+                <span className="ingredient-chip">Green onion greens</span>
+                <span className="ingredient-chip">Whole black pepper</span>
+                <span className="ingredient-chip">Salt</span>
+                <span className="ingredient-chip">Neutral oil</span>
+                <span className="ingredient-chip">Water</span>
+              </div>
             </div>
-            <div className="card">
+
+            <div className="card ingredient-card">
               <h3>Vegetarian Broth</h3>
-              <pre className="code-block">
-                  Onion
-                - Carrot
-                - Apple
-                - Garlic
-                - Ginger
-                - Green onion whites and greens separated
-                - Whole or coarsely cracked black pepper
-                - Neutral oil
-                - Salt
-                - Water
-              </pre>
+              <div className="ingredient-chips">
+                <span className="ingredient-chip">Onion</span>
+                <span className="ingredient-chip">Carrot</span>
+                <span className="ingredient-chip">Apple</span>
+                <span className="ingredient-chip">Garlic</span>
+                <span className="ingredient-chip">Ginger</span>
+                <span className="ingredient-chip">Green onion whites</span>
+                <span className="ingredient-chip">Green onion greens</span>
+                <span className="ingredient-chip">Whole black pepper</span>
+                <span className="ingredient-chip">Salt</span>
+                <span className="ingredient-chip">Neutral oil</span>
+                <span className="ingredient-chip">Water</span>
+              </div>
             </div>
-            <div className="card">
-              <h3>Noodles</h3>
-              <pre className="code-block">
-                Japanese ramen noodles or Hakka noodles
-              </pre>
-            </div>
-          </div>
-          <div className="grid-3">
-            <div className="card">
+
+            <div className="card ingredient-card">
               <h3>Chili Oil</h3>
-              <pre className="code-block">
-                  Neutral oil
-                - Shallots or red onion
-                - Garlic
-                - Ginger
-                - Chili flakes
-                - Chili powder
-                - Optional green/red chilies
-                - Soy sauce
-                - Vinegar
-              </pre>
+              <div className="ingredient-chips">
+                <span className="ingredient-chip">Neutral oil</span>
+                <span className="ingredient-chip">Shallots or red onion</span>
+                <span className="ingredient-chip">Garlic</span>
+                <span className="ingredient-chip">Ginger</span>
+                <span className="ingredient-chip optional">
+                  Green/red chilies
+                  <span className="chip-badge">Optional</span>
+                </span>
+                <span className="ingredient-chip">Chili flakes</span>
+                <span className="ingredient-chip">Chili powder</span>
+                <span className="ingredient-chip">Soy sauce</span>
+                <span className="ingredient-chip">Vinegar</span>
+              </div>
             </div>
-            <div className="card">
+
+            <div className="card ingredient-card">
               <h3>Aromatic Oil</h3>
-              <pre className="code-block">
+              <div className="ingredient-chips">
+                <span className="ingredient-chip">
+                  Rendered chicken fat (schmaltz)
+                  <span className="chip-badge">Preferred</span>
+                </span>
+                <span className="ingredient-chip optional">
                   Neutral oil
-                - Ghee or Rendered chicken fat (schmaltz)
-                - Green onions
-                - Garlic
-                - Sesame seeds
-                - Toasted sesame oil
-              </pre>
+                  <span className="chip-badge">Alternative</span>
+                </span>
+                <span className="ingredient-chip optional">
+                  Ghee
+                  <span className="chip-badge">Alternative</span>
+                </span>
+                <span className="ingredient-chip">Green onions</span>
+                <span className="ingredient-chip">Garlic</span>
+                <span className="ingredient-chip">Sesame seeds</span>
+                <span className="ingredient-chip">Toasted sesame oil</span>
+              </div>
             </div>
-            <div className="card">
+
+            <div className="card ingredient-card">
               <h3>Soy-Cured Eggs (Ajitama)</h3>
-              <pre className="code-block">
-                  Eggs
-                - Soy sauce
-                - Sugar
-                - Honey
-                - Vinegar
-                - Garlic
-                - Ginger
-                - Chili flakes
-                - Sesame oil
-                - Water
-              </pre>
+              <div className="ingredient-chips">
+                <span className="ingredient-chip">Eggs</span>
+                <span className="ingredient-chip">Soy sauce</span>
+                <span className="ingredient-chip">Water</span>
+                <span className="ingredient-chip">Sugar</span>
+                <span className="ingredient-chip">Honey</span>
+                <span className="ingredient-chip">Garlic</span>
+                <span className="ingredient-chip">Ginger</span>
+                <span className="ingredient-chip">Chili flakes</span>
+                <span className="ingredient-chip">Sesame oil</span>
+                <span className="ingredient-chip">Vinegar</span>
+              </div>
             </div>
-          </div>
-          <div className="grid-3">
-            <div className="card">
+
+            <div className="card ingredient-card">
               <h3>Vegetarian Toppings</h3>
-              <pre className="code-block">
-                Paneer or tofu
-              - Same soy marinade as eggs
-              - Sweet corn
-              - Butter
-              - Salt
-              - Black pepper
-              - Dried shiitake mushrooms
-              - Oyster mushrooms
-              - Button mushrooms
-              - Butter
-              - Neutral oil
-              - Salt
-              - Black pepper
-              </pre>
+              <div className="ingredient-chips">
+                <span className="ingredient-chip">Paneer or tofu</span>
+                <span className="ingredient-chip">Soy marinade (same as eggs)</span>
+                <span className="ingredient-chip">Sweet corn</span>
+                <span className="ingredient-chip">Butter</span>
+                <span className="ingredient-chip">Salt</span>
+                <span className="ingredient-chip">Black pepper</span>
+                <span className="ingredient-chip">
+                  Dried shiitake mushrooms
+                  <span className="chip-badge">Preferred</span>
+                </span>
+                <span className="ingredient-chip optional">
+                  Oyster mushrooms
+                  <span className="chip-badge">Alternative</span>
+                </span>
+                <span className="ingredient-chip optional">
+                  Button mushrooms
+                  <span className="chip-badge">Alternative</span>
+                </span>
+                <span className="ingredient-chip">Butter</span>
+                <span className="ingredient-chip">Neutral oil</span>
+                <span className="ingredient-chip">Salt</span>
+                <span className="ingredient-chip">Black pepper</span>
+              </div>
             </div>
-            <div className="card">
+
+            <div className="card ingredient-card">
               <h3>Soy-Glazed Chicken</h3>
-              <pre className="code-block">
-                  Boneless skin-on chicken thighs
-                - Salt
-                - Black pepper
-                - Sesame oil
-                - Corn flour
-                - Neutral oil
-                - Dark soy sauce
-                - Honey
-                - Garlic
-                - Water
-              </pre>
+              <div className="ingredient-chips">
+                <span className="ingredient-chip">Boneless skin-on chicken thighs</span>
+                <span className="ingredient-chip">Salt</span>
+                <span className="ingredient-chip">Black pepper</span>
+                <span className="ingredient-chip">Sesame oil</span>
+                <span className="ingredient-chip">Corn flour</span>
+                <span className="ingredient-chip">Neutral oil</span>
+                <span className="ingredient-chip">Dark soy sauce</span>
+                <span className="ingredient-chip">Honey</span>
+                <span className="ingredient-chip">Garlic</span>
+                <span className="ingredient-chip">Water</span>
+              </div>
             </div>
-            <div className="card">
+
+            <div className="card ingredient-card">
               <h3>Chicken Katsu</h3>
-              <pre className="code-block">
-                  Boneless skinless chicken breast
-                - Salt
-                - Black pepper
-                - Sesame oil
-                - All-purpose flour
-                - Eggs
-                - Panko breadcrumbs
-                - Optional seasoning:
-                - Salt
-                - Black pepper
-                - Chili powder
-              </pre>
+              <div className="ingredient-chips">
+                <span className="ingredient-chip">Boneless skinless chicken breast</span>
+                <span className="ingredient-chip">Salt</span>
+                <span className="ingredient-chip">Black pepper</span>
+                <span className="ingredient-chip">Sesame oil</span>
+                <span className="ingredient-chip">All-purpose flour</span>
+                <span className="ingredient-chip">Eggs</span>
+                <span className="ingredient-chip">Panko breadcrumbs</span>
+                <span className="ingredient-chip optional">
+                  Salt
+                  <span className="chip-badge">Optional</span>
+                </span>
+                <span className="ingredient-chip optional">
+                  Black pepper
+                  <span className="chip-badge">Optional</span>
+                </span>
+                <span className="ingredient-chip optional">
+                  Chili powder
+                  <span className="chip-badge">Optional</span>
+                </span>
+              </div>
             </div>
-          </div>
-          <div className="card">
-            <h3>Final Garnishes</h3>
-            <pre className="code-block">
-               Thinly sliced green onions
-              - Sesame seeds
-            </pre>
+
+            <div className="card ingredient-card">
+              <h3>Noodles</h3>
+              <div className="ingredient-chips">
+                <span className="ingredient-chip">
+                  Japanese ramen noodles
+                  <span className="chip-badge">Preferred</span>
+                </span>
+                <span className="ingredient-chip optional">
+                  Hakka noodles
+                  <span className="chip-badge">Alternative</span>
+                </span>
+              </div>
+            </div>
+
+            <div className="card ingredient-card">
+              <h3>Final Garnishes</h3>
+              <div className="ingredient-chips">
+                <span className="ingredient-chip">Thinly sliced green onions</span>
+                <span className="ingredient-chip">Sesame seeds</span>
+              </div>
+            </div>
           </div>
         </section>
-
-        <div className="image-panel">
-          <img src={brothImg} alt="Mirepoix for ramen broth" />
-        </div>
 
         <section id="broth" className="section">
           <div className="section-header">
@@ -258,12 +309,15 @@
               shoyu broth.
             </p>
           </div>
+          <div className="section-split">
+            <p className="section-split-title">Non-Vegetarian Broth</p>
+          </div>
           <div className="grid-2">
             <div className="card">
               <h3>1. Non-Vegetarian Chicken Stock</h3>
               <p>
-                Optional roasting step (highly recommended): Optionally roast
-                chicken meat and chicken fat. Do NOT roast the bones. The
+                <strong>Optional roasting step (recommended):</strong> Roast the
+                chicken meat and chicken fat. Do not roast the bones. The
                 roasting can be done in the oven on a tray or directly in a
                 pan. Roast until lightly browned and aromatic. The chicken
                 should not become burnt or deeply charred. Only light browning
@@ -275,7 +329,7 @@
                 <li>Add the chicken bones into a large pot.</li>
                 <li>Fill with water.</li>
                 <li>Bring rapidly to a boil.</li>
-                <li>Let the bones boil aggressively for a short while (10 to 15 seconds ).</li>
+                <li>Let the bones boil aggressively for around 10 to 15 seconds.</li>
                 <li>Strain the bones and throw away the dirty water.</li>
                 <li>Wash the bones thoroughly under cold running water.</li>
               </ol>
@@ -285,15 +339,20 @@
               </div>
               <div className="divider"></div>
               <h4 className="eyebrow">Mirepoix Preparation</h4>
+              <img
+                className="card-image"
+                src={mirepoixImg}
+                alt="Mirepoix prep for ramen broth"
+              />
               <ul className="prep-list">
                 <li>2 Large diced (20mm) onion</li>
                 <li>1 sliced carrot</li>
                 <li>4-5 sliced garlic cloves</li>
-                <li>4inch sliced ginger</li>
+                <li>4inch ginger knob sliced</li>
                 <li>4-5 sliced button mushrooms</li>
                 <li>4-5 sliced Shiitake (or alternatively Oyster) mushrooms</li>
                 <li>1 Large diced apple</li>
-                <li>2 whole green onions, whites sliced and greens roughly chopped each separated</li>
+                <li>2 whole green onions, whites sliced and greens roughly chopped, whites and greens separated</li>
               </ul>
               <p>
                 The vegetables do not need to be finely chopped because the
@@ -302,6 +361,11 @@
             </div>
             <div className="card">
               <h3>Building the Stock</h3>
+              <img
+                className="card-image"
+                src={charredVeggieImg}
+                alt="Charred vegetables for broth"
+              />
               <ol className="steps">
                 <li>
                   In a large heavy-bottom pot (stock), lightly coat the bottom
@@ -337,7 +401,7 @@
                 </li>
               </ol>
               <div className="callout">
-                Do NOT use finely ground black pepper because it may pass
+                Do not use finely ground black pepper because it may pass
                 through the strainer later. Longer simmering creates deeper
                 flavor.
               </div>
@@ -365,19 +429,27 @@
               </p>
             </div>
           </div>
+          <div className="section-split">
+            <p className="section-split-title">Vegetarian Broth</p>
+          </div>
           <div className="grid-2">
             <div className="card">
               <h3>2. Vegetarian Stock</h3>
               <h4 className="eyebrow">Mirepoix Preparation</h4>
+              <img
+                className="card-image"
+                src={mirepoixImg}
+                alt="Mirepoix prep for vegetarian broth"
+              />
               <ul className="prep-list">
                 <li>2 Large diced (20mm) onion</li>
                 <li>1 sliced carrot</li>
                 <li>4-5 sliced garlic cloves</li>
-                <li>4inch sliced ginger</li>
+                <li>4inch ginger knob sliced</li>
                 <li>4-5 sliced button mushrooms</li>
                 <li>4-5 sliced Shiitake (or alternatively Oyster) mushrooms</li>
                 <li>1 Large diced apple</li>
-                <li>2 whole green onions, whites sliced and greens roughly chopped each separated</li>
+                <li>2 whole green onions, whites sliced and greens roughly chopped, whites and greens separated</li>
               </ul>
               <p>
                 The vegetables do not need to be finely chopped because the
@@ -420,7 +492,7 @@
                 </li>
               </ol>
               <div className="callout">
-                Do NOT use finely ground black pepper because it may pass
+                Do not use finely ground black pepper because it may pass
                 through the strainer later. Longer simmering creates deeper
                 flavor.
               </div>
@@ -435,6 +507,9 @@
                 <li>The final broth should be clean and smooth.</li>
               </ol>
             </div>
+          </div>
+          <div className="section-split">
+            <p className="section-split-title">Shoyu Broth Finish (Shared)</p>
           </div>
           <div className="card">
             <h3>3. The Shoyu Ramen Broth</h3>
@@ -455,7 +530,7 @@
                 sugar, 1 tablespoon white distilled vinegar.
               </li>
               <li>Bring to a rapid boil on high heat.</li>
-              <li>Reduce the heat to medium low.</li>
+              <li>Reduce the heat to medium-low.</li>
               <li>Simmer for another 10-15 minutes.</li>
               <li>Taste and adjust salt and sugar to your liking.</li>
             </ol>
@@ -465,27 +540,32 @@
             <div className="divider"></div>
             <h4 className="eyebrow">Optional Soy Marinade Reduction Hack</h4>
             <p>
-              Instead of using regular soy sauce directly: Take the leftover soy
-              marinade used for eggs and paneer/tofu. Strain out garlic, ginger,
-              chili flakes, solids. Simmer the strained marinade until reduced
-              to one-third of its original volume. Add half of this reduction
-              into the broth. This creates deeper sweetness because the
-              marinade already contains sugar, honey, soy sauce, sesame oil.
-              Add 1/2 a tablespoon of vinegar. Simmer the broth for another
-              10-15 minutes. Taste and adjust salt and sugar to your liking.
+              <strong>Instead of using regular soy sauce directly:</strong> 
             </p>
+            <ul className="steps">
+              <li>Take the leftover soy marinade used for eggs and paneer/tofu.</li>
+              <li>Strain out garlic, ginger,chili flakes, solids. </li>
+              <li>Simmer the strained marinade until reducedto one-third of its original volume. </li>
+              <li>Add half of this reductioninto the broth. </li>
+              <li>Add 1/2 a tablespoon of vinegar. </li>
+              <li>Simmer the broth for another 10-15 minutes. </li>
+              <li>Taste and adjust salt and sugar to your liking.</li>
+            </ul>
+            <div className="callout">
+              This creates deeper sweetness because the
+              marinade already contains sugar, honey, soy sauce, sesame oil.
+            </div>
           </div>
         </section>
-
-        <div className="image-panel">
-          <img src={chiliImg} alt="Chili oil and aromatics" />
-        </div>
 
         <section id="chili-oil" className="section">
           <div className="section-header">
             <div>
               <p className="eyebrow">Chili Oil</p>
               <h2>Slow-infused heat with soy aroma</h2>
+            </div>
+            <div className="image-panel">
+              <img className="object-[50%_30%]" src={chiliImg} alt="Chili oil aromatics" />
             </div>
             <p className="section-note">
               Keep the heat gentle so the aromatics bloom without burning.
@@ -495,8 +575,15 @@
             <div className="card">
               <h3>Aromatics</h3>
               <p>
-                Prepare finely diced shallots or red onion, finely diced garlic,
-                and finely diced ginger. Preferred ratio: shallots/onions should
+                Prepare finely diced:
+              </p>
+                <ul className="list">
+                  <li>Shallots or red onion</li>
+                  <li>Garlic</li>
+                  <li>Ginger</li>
+                </ul>
+              <p>
+                <strong>Preferred ratio:</strong> shallots/onions should
                 be the dominant ingredient, garlic should be less than onion,
                 ginger should be about half the quantity of garlic. Finely
                 diced ginger is preferred over grated ginger because grated
@@ -522,7 +609,8 @@
                 Do not bring the heat up to high, keep it in medium. The
                 aromatics should infuse into the oil without burning.
               </div>
-              <div className="divider"></div>
+              </div>
+              <div className="card">
               <h3>The spices</h3>
               <ol className="steps">
                 <li>
@@ -558,6 +646,7 @@
                 The more the chili oil rests the deeper the flavour becomes.
               </div>
             </div>
+            </div>
             <div className="card media-card">
               <h3>Reference video</h3>
               <div className="video-frame">
@@ -569,7 +658,6 @@
                 ></iframe>
               </div>
             </div>
-          </div>
         </section>
 
         <section id="aromatic-oil" className="section">
@@ -651,75 +739,10 @@
           </div>
         </section>
 
-        <section id="ajitama" className="section">
-          <div className="section-header">
-            <div>
-              <p className="eyebrow">Ajitama</p>
-              <h2>Soy-Cured Eggs (Ajitama)</h2>
-            </div>
-            <p className="section-note">
-              Timing matters. Ice bath immediately for clean, centered yolks.
-            </p>
-          </div>
-          <div className="grid-2">
-            <div className="card">
-              <h3>Soft-Boiled Eggs</h3>
-              <ol className="steps">
-                <li>Fill a pot with water.</li>
-                <li>Bring it to a boil.</li>
-                <li>Add 2 tablespoons vinegar and optionally 1-2 pinches salt.</li>
-                <li>Carefully lower the eggs into the boiling water.</li>
-                <li>For cold eggs boil for 7 minutes.</li>
-                <li>For room temp eggs boil for 6-7 minutes.</li>
-                <li>
-                  After boiling immediately transfer the eggs into an cold ice
-                  bath.
-                </li>
-                <li>Leave in the ice bath for about 5 minutes.</li>
-              </ol>
-              <div className="callout">
-                6 minutes: runnier yolk. 7 minutes: jammy yolk. Vinegar helps
-                loosen the shell and makes the eggs easier to peel.
-              </div>
-              <p>
-                Peeling hack: Tap the shell gently all around using the back of
-                a spoon. Crack the shell thoroughly. Slide the spoon underneath
-                the shell. Carefully peel away the shell.
-              </p>
-            </div>
-            <div className="card">
-              <h3>Soy Marinade</h3>
-              <ol className="steps">
-                <li>
-                  Lightly crush 2 medium sized garlic cloves and 2 medium sized
-                  ginger slices. Crush enough to break fibers and release flavor
-                  while still keeping them whole.
-                </li>
-                <li>
-                  Into a bowl add 1/2 cup dark soy sauce, 1/4 cup sugar, 1
-                  tablespoon honey, 1 tablespoon vinegar, the garlic cloves, the
-                  ginger slices, optional sliced green or red chilies, 1
-                  tablespoon chili flakes, 1/2 teaspoon sesame oil, 1/2 cup
-                  water. Mix everything thoroughly.
-                </li>
-                <li>Place peeled eggs into the marinade.</li>
-                <li>Cover the bowl tightly with plastic wrap.</li>
-                <li>
-                  Push the plastic wrap directly onto the eggs so the eggs
-                  remain fully submerged. Optionally place a small weight on
-                  top.
-                </li>
-                <li>Marinate for 20-24 hours or more.</li>
-              </ol>
-              <div className="callout">
-                Any exposed surface may leave white unmarinated patches.
-              </div>
-            </div>
-          </div>
-        </section>
-
-        <div className="image-panel">
-          <img src={paneerImg} alt="Soy cured paneer and tofu" />
+        <div className="section-split">
+          <p className="section-split-title section-split-title-strong">
+            Vegetarian Toppings
+          </p>
         </div>
 
         <section id="paneer" className="section">
@@ -727,6 +750,9 @@
             <div>
               <p className="eyebrow">Paneer / Tofu</p>
               <h2>Soy-Marinated Paneer / Tofu</h2>
+            </div>
+            <div className="image-panel">
+              <img src={paneerImg} alt="Soy cured paneer and tofu" />
             </div>
             <p className="section-note">
               Use the same soy marinade as the eggs to keep flavors cohesive.
@@ -742,13 +768,29 @@
                   while still keeping them whole.
                 </li>
                 <li>
-                  Into a bowl add 1/2 cup dark soy sauce, 1/4 cup sugar, 1
-                  tablespoon honey, 1 tablespoon vinegar, the garlic cloves, the
-                  ginger slices, optional sliced green or red chilies, 1
-                  tablespoon chili flakes, 1/2 teaspoon sesame oil, 1/2 cup
-                  water. Mix everything thoroughly.
+                  Into a bowl add:
+                  <ol className="list">
+                    <li>1/2 cup dark soy sauce</li>
+                    <li>1/4 cup sugar</li>
+                    <li>1 tablespoon honey</li>
+                    <li>1 tablespoon vinegar</li>
+                    <li>the garlic cloves</li>
+                    <li>the ginger slices</li>
+                    <li>optional sliced green or red chilies</li>
+                    <li>1/2 tablespoon chili flakes</li>
+                    <li>1/2 teaspoon sesame oil</li>
+                    <li>1/2 cup water</li>
+                  </ol>
                 </li>
+                <li>Mix everything thoroughly.</li>                
               </ol>
+              <div className="callout">
+                If using the same marinade: Marinate the eggs first. After 12-14
+                hours, add the paneer or tofu. Continue marinating everything
+                together for another 8-10 hours.
+              </div>
+            </div>
+            <div className="card">
               <h3>Marinating the Paneer/Tofu</h3>
               <ol className="steps">
                 <li>Cut paneer or tofu into long rectangular cuboids.</li>
@@ -761,13 +803,7 @@
                 </li>
                 <li>Marinate for 8 hours or more.</li>
               </ol>
-              <p>
-                If using the same marinade: Marinate the eggs first. After 12-14
-                hours, add the paneer or tofu. Continue marinating everything
-                together for another 8-10 hours.
-              </p>
-            </div>
-            <div className="card">
+              <div className="divider"></div>
               <h3>Pan Searing</h3>
               <ol className="steps">
                 <li>Remove the paneer or tofu from the marinade.</li>
@@ -788,10 +824,6 @@
           </div>
         </section>
 
-        <div className="image-panel">
-          <img src={cornImg} alt="Brown butter sweet corn" />
-        </div>
-
         <section id="sweet-corn" className="section">
           <div className="section-header">
             <div>
@@ -802,26 +834,28 @@
               Keep it glossy, nutty, and lightly caramelized.
             </p>
           </div>
-          <div className="card">
-            <h3>Instructions</h3>
-            <ol className="steps">
-              <li>Melt 2 tablespoons butter in a pan over medium heat.</li>
-              <li>Let the butter brown slowly.</li>
-              <li>Swirl the pan occasionally so the butter browns evenly without burning.</li>
-              <li>Once the butter develops a nutty brown aroma and color, add 3 tablespoons sweet corn.</li>
-              <li>Toss and baste the corn repeatedly using the browned butter.</li>
-              <li>Continue cooking until lightly caramelized.</li>
-              <li>Optionally season with black pepper and salt.</li>
-            </ol>
-            <div className="callout">
-              If using salted butter, additional salt is not necessary.
+          <div className="grid-2">
+            <div className="card">
+              <h3>Instructions</h3>
+              <ol className="steps">
+                <li>Melt 2 tablespoons butter in a pan over medium heat.</li>
+                <li>Let the butter brown slowly.</li>
+                <li>Swirl the pan occasionally so the butter browns evenly without burning.</li>
+                <li>Once the butter develops a nutty brown aroma and color, add 3 tablespoons sweet corn.</li>
+                <li>Toss and baste the corn repeatedly using the browned butter.</li>
+                <li>Continue cooking until lightly caramelized.</li>
+                <li>Optionally season with black pepper and salt.</li>
+              </ol>
+              <div className="callout">
+                If using salted butter, additional salt is not necessary.
+              </div>
             </div>
+              <div className="image-panel">
+                <img className="!max-h-none " src={cornImg} alt="Brown butter sweet corn" />
+              </div>
+
           </div>
         </section>
-
-        <div className="image-panel">
-          <img src={mushroomImg} alt="Sauteed mushrooms" />
-        </div>
 
         <section id="mushrooms" className="section">
           <div className="section-header">
@@ -829,10 +863,11 @@
               <p className="eyebrow">Mushrooms</p>
               <h2>Sauteed Mushrooms</h2>
             </div>
+            <div className="image-panel">
+              <img src={mushroomImg} alt="Sauteed mushrooms" />
+            </div>
             <p className="section-note">
-              Preferred: dried shiitake mushrooms. Alternative: oyster
-              mushrooms. Last resort: button mushrooms. Button mushrooms work
-              but do not provide as distinct a flavor profile.
+              Deeply caramelized mushrooms bring earthy umami and a rich savory depth and a meaty texture to the bowl.
             </p>
           </div>
           <div className="grid-2">
@@ -843,6 +878,9 @@
                 <li>Alternative: oyster mushrooms.</li>
                 <li>Last resort: button mushrooms.</li>
               </ul>
+              <div className="callout">
+                Button mushrooms work but do not provide as distinct a flavor profile.
+              </div>
             </div>
             <div className="card">
               <h3>Instructions</h3>
@@ -863,9 +901,106 @@
           </div>
         </section>
 
-        <div className="image-panel">
-          <img src={chickenImg} alt="Soy glazed chicken" />
+        <div className="section-split">
+          <p className="section-split-title section-split-title-strong">
+            Non-Vegetarian Toppings
+          </p>
         </div>
+
+        <section id="ajitama" className="section">
+          <div className="section-header">
+            <div>
+              <p className="eyebrow">Ajitama</p>
+              <h2>Soy-Cured Eggs (Ajitama)</h2>
+            </div>
+            <div className="image-panel">
+              <img src={eggImg} alt="Soy-cured eggs (ajitama)" />
+            </div>
+            <p className="section-note">
+              Timing matters. Ice bath immediately for clean, centered yolks.
+            </p>
+          </div>
+          <div className="grid-2">
+            <div className="card">
+              <h3>Soft-Boiled Eggs</h3>              
+              <ol className="steps">
+                <li>Fill a pot with water.</li>
+                <li>Bring it to a boil.</li>
+                <li>Add 2 tablespoons vinegar and optionally 1-2 pinches salt.</li>
+                <li>Carefully lower the eggs into the boiling water.</li>
+                <li>For cold eggs boil for 7 minutes.</li>
+                <li>For room temp eggs boil for 6-7 minutes.</li>
+                <li>
+                  After boiling immediately transfer the eggs into an cold ice
+                  bath.
+                </li>
+                <li>Leave in the ice bath for about 5 minutes.</li>
+              </ol>
+              <ul className="list">
+                <li>6 minutes: for runnier yolk</li>
+                <li>7 minutes: for jammy yolk.</li>
+              </ul>
+              <p>
+                Vinegar helps loosen the shell and makes the eggs easier to peel.
+              </p>
+              <div className="callout">
+                Peeling hack: Tap the shell gently all around using the back of
+                a spoon. Crack the shell thoroughly. Slide the spoon underneath
+                the shell. Carefully peel away the shell.
+              </div>
+            </div>
+            <div className="card">
+              <h3>Soy Marinade</h3>
+              <ol className="steps">
+                <li>
+                  Lightly crush 2 medium sized garlic cloves and 2 medium sized
+                  ginger slices. Crush enough to break fibers and release flavor
+                  while still keeping them whole.
+                </li>
+                <li>
+                  Into a bowl add:
+                  <ol className="list">
+                    <li>1/2 cup dark soy sauce</li>
+                    <li>1/4 cup sugar</li>
+                    <li>1 tablespoon honey</li>
+                    <li>1 tablespoon vinegar</li>
+                    <li>the garlic cloves</li>
+                    <li>the ginger slices</li>
+                    <li>optional sliced green or red chilies</li>
+                    <li>1/2 tablespoon chili flakes</li>
+                    <li>1/2 teaspoon sesame oil</li>
+                    <li>1/2 cup water</li>
+                  </ol>
+                </li>
+                <li>Mix everything thoroughly.</li>
+                <li>Place peeled eggs into the marinade.</li>
+                <li>Cover the bowl tightly with plastic wrap.</li>
+                <li>
+                  Push the plastic wrap directly onto the eggs so the eggs
+                  remain fully submerged. Optionally place a small weight on
+                  top.
+                </li>
+                <li>Marinate for 20-24 hours or more.</li>
+              </ol>
+              <div className="callout">
+                Any exposed surface may leave white unmarinated patches.
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section id="topping-preference" className="section">
+        <div className="callout callout-spotlight">
+            <div className="callout-heading">
+              <span className="callout-icon" aria-hidden="true">!</span>
+              <span className="callout-title">Topping Preference</span>
+            </div>
+            Soy glazed chicken is easier and faster to make. But taste wise and
+            enjoyment wise I much prefer you to make the Chicken Katsu. Both will
+            serve as a good ramen topping, but if you are willing to go that
+            extra mile, I highly lean on the Chicken Katsu.
+        </div>
+        </section>
 
         <section id="soy-chicken" className="section">
           <div className="section-header">
@@ -873,13 +1008,16 @@
               <p className="eyebrow">Chicken Topping</p>
               <h2>Soy-Glazed Chicken</h2>
             </div>
+            <div className="image-panel">
+              <img src={chickenImg} alt="Soy glazed chicken" />
+            </div>
             <p className="section-note">
-              Soy glazed chicken is easier and faster to make. But taste wise
-              and enjoyment wise I much prefer you to make the Chicken Katsu.
-              Both will serve as a good ramen topping, but if you are willing to
-              go that extra mile, I highly lean on the Chicken Katsu.
+              Finished in a sticky soy-honey glaze, the chicken develops a glossy
+              caramelized coating packed with umami and subtle sweetness.
             </p>
+            
           </div>
+          
           <div className="grid-2">
             <div className="card">
               <h3>Chicken Preparation</h3>
@@ -900,8 +1038,9 @@
                 <li>Marinate for ideally 2-4 hours, or a minimum of 30 minutes.</li>
               </ol>
               <p>Longer marination improves flavor.</p>
-            </div>
-            <div className="card">
+
+              <div className="divider"></div>
+
               <h3>Cooking the Chicken</h3>
               <ol className="steps">
                 <li>Coat both sides lightly with corn flour.</li>
@@ -915,20 +1054,26 @@
                 <li>Cook the second side for another 5-6 minutes.</li>
                 <li>Remove the chicken from the pan.</li>
               </ol>
-              <div className="divider"></div>
+            </div>
+            <div className="card">
               <h3>Soy Glaze</h3>
               <p>
-                Soy sauce, dark soy sauce, honey, garlic, water. Garlic options:
-                For only garlicky flavour use lightly crushed garlic cloves. For
-                garlic bits on the chicken use minced or finely chopped garlic.
+                Soy sauce, dark soy sauce, honey, garlic, water.
               </p>
+              <div className="callout">
+                Garlic options: 
+                <ul className="list">
+                  <li>For only garlicky flavour use lightly crushed garlic cloves.</li>
+                  <li>For garlic bits on the chicken use minced or finely chopped garlic.</li>
+                </ul>
+              </div>
               <h4 className="eyebrow">Glazing Instructions</h4>
               <ol className="steps">
                 <li>In the same pan used for the chicken, pour in the glaze mixture.</li>
                 <li>Simmer for around 1 minute until slightly thickened.</li>
                 <li>Allow the water to reduce.</li>
                 <li>Once bubbling for 10-20 seconds, Add back the chicken into the pan.</li>
-                <li>Spoon glaze over the top repeatedly and flipping the chicken occasionally.</li>
+                <li>Spoon glaze over the top repeatedly and flip the chicken occasionally.</li>
                 <li>Cook the chicken for 1-2 minutes on high heat until fully coated.</li>
                 <li>Slice into thick strips before serving.</li>
               </ol>
@@ -947,15 +1092,14 @@
           </div>
         </section>
 
-        <div className="image-panel">
-          <img src={katsuImg} alt="Chicken katsu" />
-        </div>
-
         <section id="katsu" className="section">
           <div className="section-header">
             <div>
               <p className="eyebrow">Chicken Katsu</p>
               <h2>Chicken Katsu</h2>
+            </div>
+            <div className="image-panel">
+              <img src={katsuImg} alt="Chicken katsu" />
             </div>
             <p className="section-note">
               The key trick is using one dry hand and one wet hand. This
@@ -966,7 +1110,7 @@
             <div className="card">
               <h3>Chicken Preparation</h3>
               <ol className="steps">
-                <li>Use boneless skin-on chicken thighs.</li>
+                <li>Use boneless skin-less chicken breasts.</li>
                 <li>Place the chicken onto a cutting board or flat surface.</li>
                 <li>Cover with plastic wrap.</li>
                 <li>Beat the meat with a meat mallet or heavy pan or pot.</li>
@@ -992,6 +1136,11 @@
               </p>
               <h4 className="eyebrow">Optional Seasoning</h4>
               <p>Season the flour and egg wash with salt, black pepper, chili powder.</p>
+              <div className="callout">
+                <p>
+                  <strong>Tip:</strong> Use a dry hand for dry surfaces and a wet hand for wet surfaces to prevent clumping.
+                </p>
+              </div>
             </div>
           </div>
           <div className="grid-2">
@@ -1007,21 +1156,22 @@
               <h3>2. Egg Wash Layer</h3>
               <ol className="steps">
                 <li>Transfer the chicken into the egg wash.</li>
+                <li>Flip the chicken and coat each side.</li>
                 <li>Use dry hand for dry surfaces and wet hand for wet surfaces.</li>
                 <li>Press gently so the egg binds fully to the flour coating.</li>
               </ol>
             </div>
             <div className="card">
-              <h3>3. Breadcrumb Layer</h3>
+              <h3>3. Panko Layer</h3>
               <ol className="steps">
                 <li>Transfer the chicken into the breadcrumbs using the wet hand.</li>
                 <li>Press firmly so breadcrumbs stick properly.</li>
                 <li>Flip the chicken.</li>
                 <li>Use your dry hand once the breadcrumb side becomes dry.</li>
-                <li>
-                  Continue pressing firmly until no exposed meat, no exposed
+                <li>Continue pressing firmly until no exposed meat, no exposed
                   flour, no visible egg wash remains.
                 </li>
+                <li>Add more panko if needed.</li>
                 <li>Only breadcrumbs should remain visible.</li>
               </ol>
             </div>
@@ -1035,7 +1185,7 @@
               <li>At minimum, the oil should cover half the chicken.</li>
               <li>
                 Heat the oil on medium/medium-high to an ideal frying
-                temperature of 350Â°F (175Â°C).
+                temperature of 350°F (175°C).
               </li>
             </ol>
             <div className="callout">
@@ -1086,7 +1236,7 @@
                 <li>Use only the soft white center.</li>
                 <li>Cut into medium chunks.</li>
                 <li>Place into food processor or manual vegetable chopper.</li>
-                <li>Do NOT use a mixer grinder.</li>
+                <li>Do not use a mixer grinder.</li>
                 <li>Pulse until medium flaky crumbs form.</li>
                 <li>
                   Heat a pan gently on low heat. Add the breadcrumbs. Toast on
@@ -1095,10 +1245,10 @@
                 <li>Stir periodically so they don't brown or burn.</li>
                 <li>Allow the breadcrumbs to dry out slowly.</li>
               </ol>
-              <p>
+              <div className="callout">
                 The breadcrumbs should become crispy, lose moisture, remain
                 white. The crumbs should not become powder.
-              </p>
+              </div>
             </div>
             <div className="card media-card">
               <h3>Reference video</h3>
@@ -1119,6 +1269,9 @@
             <div>
               <p className="eyebrow">Noodles</p>
               <h2>Noodles</h2>
+            </div>
+            <div className="image-panel">
+              <img src={noodlesImg} alt="Noodles" />
             </div>
             <p className="section-note">
               Do not use instant ramen noodles or maggi noodles. They have wavy

@@ -798,7 +798,7 @@ Last resort:
 
 ### Chicken Preparation
 
-1. Use boneless skin-on chicken thighs.
+1. Use boneless skin-less chicken breasts.
 2. Place the chicken onto a cutting board or flat surface.
 3. Cover with plastic wrap.
 4. Beat the meat with a meat mallet or heavy pan or pot
